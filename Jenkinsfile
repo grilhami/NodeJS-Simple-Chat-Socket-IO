@@ -9,7 +9,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-                sh "BUILD_ID=dontKillMe pm2 restart index.js --name SimpleChat"
+                sh "BUILD_ID=dontKillMe pm2 start index.js --name SimpleChat"
             }
         }
     }
