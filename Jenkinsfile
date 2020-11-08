@@ -9,7 +9,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-                sh "pm2 start index.js --name SimpleChat"
+                sh "./deploy.sh"
             }
         }
     }
