@@ -1,1 +1,1 @@
-sudo pm2 start index.js --name SimpleChat
+node index.js &> project.log &
