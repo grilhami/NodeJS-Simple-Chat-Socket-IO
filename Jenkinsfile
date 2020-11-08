@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                npm install
+                sh "npm install"
             }
         }
 
         stage('deploy') {
             steps {
-                pm2 start index.js
+                sh "pm2 start index.js --name SimpleChat"
             }
         }
     }
