@@ -1,1 +1,1 @@
-pm2 start index.js --name SimpleChat
+sudo pm2 start index.js --name SimpleChat
