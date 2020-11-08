@@ -9,7 +9,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-                sh "node index.js &> project.log &"
+                sh "sudo ./deploy.sh"
             }
         }
     }
