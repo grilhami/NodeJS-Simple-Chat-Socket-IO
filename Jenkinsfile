@@ -3,19 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'bulding the application ...' 
-            }
-        }
-
-        stage('test') {
-            steps {
-                echo 'testing the application ...' 
+                npm install
             }
         }
 
         stage('deploy') {
             steps {
-                echo 'deploying the application ...' 
+                pm2 start index.js --name SimpleChat
             }
         }
     }
